@@ -126,3 +126,14 @@
 
 #### Lembrando que todos as informações acima foram retiradas do material complementar oficial do curso, e colocados aqui não para fins de divulgação do trabalho de outra pessoa, mas sim os passos que utilizei e achei relevante de serem citados em caso pessoal de replicação deste projeto e seus fundamentos. Todos os direitos do tutorial acima pertencem à ***Rocketseat***. 
 
+### LINKS DE DOCUMENTAÇÃO DE CADA TECNOLOGIA:
+
+[Redis](https://redis.io/)
+[PostgreeSQL](https://www.postgresql.org/)
+[NodeJS](https://nodejs.org/en)
+[TypeScript](https://www.typescriptlang.org/)
+[Fastify](https://fastify.dev/)
+[Prisma](https://www.prisma.io/)
+[Zod](https://zod.dev/)
+[Docker](https://www.docker.com/)
+[Ioredis](https://www.https://www.npmjs.com/package/ioredis.com/)
