@@ -137,3 +137,5 @@
 [Zod](https://zod.dev/)
 [Docker](https://www.docker.com/)
 [Ioredis](https://www.https://www.npmjs.com/package/ioredis.com/)
+
+[Hoppscotch](https://hoppscotch.io/)
