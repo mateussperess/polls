@@ -59,14 +59,14 @@
 
 1. Se tiver a pasta `prisma/migrations`, apague ela. (está tudo bem se não tiver)
 2. No arquivo `prisma/schema` , troque o valor de `provider` para `sqlite`
->    datasource db {
->    provider = "sqlite" // Essa linha
->    url      = env("DATABASE_URL")
->    }
+    `datasource db {
+    provider = "sqlite" // Essa linha
+    url      = env("DATABASE_URL")
+    }`
 
 3. No arquivo `.env` troque a URL de conexão para um novo caminho:
 
-> DATABASE_URL="file:./app.db"
+`DATABASE_URL="file:./app.db"`
 
 **Recomendamos colocar no .gitignore esses valores:**
 > *.db
@@ -75,23 +75,23 @@
 4. Executar o comando `npx prisma migrate dev` para criar as migrations. Informe o nome que preferir.
 5. Por fim, no arquivo `src/http/routes/create-poll.ts`, não é possível utilizar o `createMany` com o SQLite, vamos então trocar para:
 
->// ...
->// Primeiro, criar a poll, sem options.
->const poll = await prisma.poll.create({
->  data: {
->    title,
->  }
->})
->
->// Em seguida, utilizar um Promise.all para criar todas as options:
->await Promise.all(options.map((option) => {
->  return prisma.pollOption.create({
->    data: {
->      title: option,
->      pollId: poll.id
->    }
->  })
->}))
+`// ...
+// Primeiro, criar a poll, sem options.
+const poll = await prisma.poll.create({
+  data: {
+    title,
+  }
+})
+
+// Em seguida, utilizar um Promise.all para criar todas as options:
+await Promise.all(options.map((option) => {
+  return prisma.pollOption.create({
+    data: {
+      title: option,
+      pollId: poll.id
+    }
+  })
+}))`
 
 ### Configurando o Upstash + Redis
 *Antes de tudo, o que é o Upstash? Upstash é uma plataforma com diversos serviços para ambiente serverless (outro tipo de aplicação que não precisa se preocupar agora, foco jovem gafanhoto), e um desses serviços é um Banco Redis. O plano free é bem generoso.*
@@ -128,13 +128,13 @@
 
 ### LINKS DE DOCUMENTAÇÃO DE CADA TECNOLOGIA:
 
-[Redis](https://redis.io/)
-[PostgreeSQL](https://www.postgresql.org/)
-[NodeJS](https://nodejs.org/en)
-[TypeScript](https://www.typescriptlang.org/)
-[Fastify](https://fastify.dev/)
-[Prisma](https://www.prisma.io/)
-[Zod](https://zod.dev/)
-[Docker](https://www.docker.com/)
-[Ioredis](https://www.https://www.npmjs.com/package/ioredis.com/)
-[Hoppscotch](https://hoppscotch.io/)
+### [Redis](https://redis.io/)
+### [PostgreeSQL](https://www.postgresql.org/)
+### [NodeJS](https://nodejs.org/en)
+### [TypeScript](https://www.typescriptlang.org/)
+### [Fastify](https://fastify.dev/)
+### [Prisma](https://www.prisma.io/)
+### [Zod](https://zod.dev/)
+### [Docker](https://www.docker.com/)
+### [Ioredis](https://www.https://www.npmjs.com/package/ioredis.com/)
+### [Hoppscotch](https://hoppscotch.io/)
